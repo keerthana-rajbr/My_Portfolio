@@ -7,11 +7,11 @@
 
 :root {
   /* ~~~~~ primary color ~~~~~ */
-  --clr-primary-100: #f8fdfc;
-  --clr-primary-200: #f6fdfb;
-  --clr-primary-300: #c7f2e5;
-  --clr-primary-400: #6edcbb;
-  --clr-primary-500: #20c997;
+  --clr-primary-100: #fffbfc;
+  --clr-primary-200: #fffbfc;
+  --clr-primary-300: #fb7aa1;
+  --clr-primary-400: #f86494;
+  --clr-primary-500: #ee2a7b;
   --clr-primary-600: #199d76;
   --clr-primary-700: #158362;
   --clr-primary-800: #10654c;
@@ -121,6 +121,7 @@ img:not(.logo) {
 /* ---------- GLOBAL CLASSES ---------- */
 
 /* ~~~~~ button ~~~~~ */
+
 .btn {
   border: 1px solid black;
   font-size: 1rem;
@@ -134,10 +135,9 @@ img:not(.logo) {
   transition: var(--transition);
 }
 .btn:hover {
-  border: 1px solid var(--clr-primary-500);
-  box-shadow: var(--box-shadow-primary-dark);
   background: transparent;
   color: var(--clr-black);
+  box-shadow: var(--box-shadow-dark);
 }
 
 /* ~~~~~ section ~~~~~ */
@@ -162,7 +162,7 @@ img:not(.logo) {
   font-weight: 700;
 }
 .underline {
-  background: var(--clr-primary-400);
+  background: var(--clr-primary-500);
   width: 5rem;
   height: 0.25rem;
   margin: 0 auto;
@@ -259,7 +259,7 @@ img:not(.logo) {
     transition: var(--transition);
   }
   .nav-links a:hover {
-    color: var(--clr-primary-800);
+    color: var(--clr-primary-500);
   }
   .nav-links a:hover::after {
     opacity: 1;
@@ -312,7 +312,7 @@ img:not(.logo) {
   justify-content: center;
   gap: 1rem;
 }
-.social-icons li {
+.social-icons li  {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -324,6 +324,8 @@ img:not(.logo) {
   overflow: hidden;
   transition: var(--transition);
 }
+
+
 .social-icons a {
   color: var(--clr-gray-300);
   font-size: 1.75rem;
@@ -334,10 +336,28 @@ img:not(.logo) {
   content: '';
   width: 100%;
   height: 100%;
-  background: var(--clr-primary-500);
   top: -50px;
   transition: 0.5s;
   position: absolute;
+}
+.github-col::after {
+  background: var(--clr-black);
+}
+.linkedin-col::after {
+  background: #0c64c8;
+}
+.facebook-col::after {
+  background: #1193f3;
+}
+.instagram-col::after {
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+   );
 }
 .social-icons li:hover::after {
   transform: translateY(100%);
@@ -347,7 +367,7 @@ img:not(.logo) {
 }
 .social-icons li:hover {
   transform: translateY(-5px);
-  box-shadow: 0px 1px 10px var(--clr-primary-500);
+
 }
 
 /* ~~~~~ side nav links ~~~~~ */
@@ -493,7 +513,7 @@ h4 {
   max-width: 40rem;
 }
 .timeline-item {
-  border: 0.01rem dashed var(--clr-primary-500);
+  border: 0.01rem dashed var(--clr-primary-400);
   position: relative;
 }
 
@@ -508,7 +528,7 @@ h4 {
   margin-bottom: 0;
 }
 .timeline-item-title {
-  color: var(--clr-primary-800);
+  color: var(--clr-primary-500);
   font-weight: 600;
 }
 
@@ -569,7 +589,7 @@ h4 {
 }
 /* ~~~~~ skillbar content ~~~~~ */
 .skills-header h4 {
-  color: var(--clr-primary-800);
+  color: var(--clr-primary-500);
   margin-bottom: 1rem;
   font-weight: 700;
   font-size: 1.5rem;
@@ -580,21 +600,21 @@ h4 {
 .skill-item p {
   text-transform: capitalize;
   font-size: 1rem;
-  color: var(--clr-primary-800);
+  color: black;
   margin-bottom: 0.5rem;
 }
 
 /* ~~~~~ skillbar ~~~~~ */
 .skillbar-container {
   width: 100%;
-  height: 0.75rem;
+  height: 0.8rem;
   background: var(--clr-primary-200);
   border-radius: var(--radius);
-  box-shadow: 0px 0px 2px var(--clr-primary-800);
+  border: 1px solid var(--clr-primary-400);
 }
 .progress {
   height: inherit;
-  background: var(--clr-primary-800);
+  background: var(--clr-primary-300);
   border-radius: var(--radius);
 }
 
@@ -637,7 +657,7 @@ h4 {
     width: 0;
   }
   to {
-    width: 85%;
+    width: 90%;
   }
 }
 @keyframes regression {
@@ -645,7 +665,7 @@ h4 {
     width: 0;
   }
   to {
-    width: 85%;
+    width: 90%;
   }
 }
 @keyframes ui {
@@ -653,7 +673,7 @@ h4 {
     width: 0;
   }
   to {
-    width: 50%;
+    width: 90%;
   }
 }
 @keyframes agile {
@@ -661,7 +681,7 @@ h4 {
     width: 0;
   }
   to {
-    width: 50%;
+    width: 90%;
   }
 }
 @keyframes jira {
@@ -669,7 +689,7 @@ h4 {
     width: 0;
   }
   to {
-    width: 60%;
+    width: 90%;
   }
 }
 
@@ -694,7 +714,7 @@ h4 {
     width: 0;
   }
   to {
-    width: 25%;
+    width: 65%;
   }
 }
 @keyframes java {
@@ -710,7 +730,7 @@ h4 {
     width: 0;
   }
   to {
-    width: 30%;
+    width: 40%;
   }
 }
 /* ~~~~~ media queries - skillbar ~~~~~ */
@@ -859,3 +879,4 @@ h4 {
 }
 /* ============================== */
 /* ============================== */
+
